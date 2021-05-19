@@ -56,14 +56,6 @@ app.post('/users', function (req, res) {
     });
     newUser.save();
     res.redirect('/')
-    let image = req.files.image;
-    image.mv(path.resolve(__dirname,'public/img',image.name),async (error)=>{
-        await users.create({
-            ...req.body,
-            image: '/img/' + image.name
-        })
-        res.redirect('/')
-    })
 })
 
 app.listen(5000, ()=>{
