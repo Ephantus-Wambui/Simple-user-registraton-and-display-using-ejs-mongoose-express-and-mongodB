@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('layouts/header'); -%>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <%- include('layouts/navbar'); -%>
+
+        <h1>Capture bio data.</h1>
+
+        <form action="/users" method="post"  enctype="multipart/form-data">
+            <div class="name-container">
+                <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+            </div><br />
+            <input type="text" class="form-control" name="username" placeholder="User Name"><br />
+            <input type="email" class="form-control" name="email" placeholder="Email"><br />
+            <input type="date" name="DOB" class="form-control" placeholder="Date of Birth"><br />
+            <input type="tel" name="tel" class="form-control" placeholder="Telephone Number"><br />
+            <button class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+    <%- include('layouts/footer'); -%>
+
+    <%- include('layouts/scripts'); -%>
+    
+</body>
+
+</html>

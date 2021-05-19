@@ -1,0 +1,19 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
