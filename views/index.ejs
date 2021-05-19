@@ -9,47 +9,30 @@
 
         <%- include('layouts/navbar'); -%>
 
-        <h1>Users saved to mongoDB.</h1>
+        <h1>Users saved to mongoDB:</h1>
 
-        <table class="table">
+        <% usersList.forEach(user => { %>
+            
+            <div class="users">
+            
+                <h1>User id: <span><%=  user._id %>;</span></h1>
 
-            <thead>
+                <div class="fullname">
+                    <div class="firstname"><span>Firstname:</span><%= user.firstname %></div>
+                    <div class="lastname"><span>Lastname:</span><%= user.lastname %></div>
+                </div>
 
-                <tr>
+                <div class="username"><span>Username:</span><%= user.username %></div>
 
-                    <th scope="col">ID</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">DOB</th>
-                    <th scope="col">Telephone Number</th>
+                <div class="mail"><span>Email:</span><%= user.email %></div>
 
-                </tr>
+                <div class="dateofbirth"><span>DOB:</span><%= user.DOB %></div>
 
-            </thead>
+                <div class="tel"><span>Telephone number:</span><%= user.tel %></div>
 
-            <tbody>
-
-                <% usersList.forEach(user => { %>
-
-                    <tr>
-
-                        <th scope="row"><%=  user._id %></th>
-                        <td><%= user.firstname %></td>
-                        <td><%= user.lastname %></td>
-                        <td><%= user.username %></td>
-                        <td><%= user.email %></td>
-                        <td><%= user.DOB %></td>
-                        <td><%= user.tel %></td>
-
-                    </tr>
-
-                <% }) %>
-
-            </tbody>
-
-        </table>
+            </div>
+            
+        <% }) %>
 
     </div>
 

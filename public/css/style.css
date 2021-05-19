@@ -15,5 +15,30 @@ a {
 .name-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+.container h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.users {
+    width: 100%;
+    min-height: 200px;
+}
+
+.users h1 {
+    font-weight: bold;
+}
+
+.fullname {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+}
+
+.users span {
+    font-weight: bold;
+    margin-right: 10px;
 }
