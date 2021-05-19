@@ -51,7 +51,7 @@ app.post('/users', function (req, res) {
         username: req.body.username,
         email: req.body.email,
         DOB: req.body.DOB,
-        image: req.body.image,
+        datePosted: req.body.datePosted,
         tel: req.body.tel
     });
     newUser.save();
