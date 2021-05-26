@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 const fileUpload = require('express-fileupload')
 app.use(fileUpload())
 
-mongoose.connect('mongodb://localhost/users_database', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true});
+mongoose.connect('mongodb+srv://ephy:root@cluster0.opzey.mongodb.net/users_database', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true});
 
 // Users Schema
 
@@ -58,6 +58,8 @@ app.post('/users', function (req, res) {
     res.redirect('/')
 })
 
-app.listen(5000, ()=>{
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, ()=>{
     console.log("Server listening on port 5000");
 })
