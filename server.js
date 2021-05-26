@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 const fileUpload = require('express-fileupload')
 app.use(fileUpload())
 
-mongoose.connect('mongodb+srv://ephy:root@cluster0.opzey.mongodb.net/users_database', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true});
+mongoose.connect('mongodb://localhost/users_database', {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true});
 
 // Users Schema
 
