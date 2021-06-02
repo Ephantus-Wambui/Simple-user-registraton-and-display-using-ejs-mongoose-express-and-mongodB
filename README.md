@@ -8,4 +8,4 @@ Usage;
 
 npm i ejs express mongoose
 
-npm start
+node server.js
